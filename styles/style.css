@@ -46,6 +46,11 @@
     border-radius: 8px;
 }
 
+.section-title{
+    font-size: 2.85rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
 /** header styles */
 /** nav styles */
 .navbar{
@@ -108,22 +113,147 @@ main > section{
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-
+.team-img-container>img{
+    width: 100%;
+}
 .feature-title{
     font-size: 2.85rem;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 #ql{
     font-weight: 500;
 }
 .team-features{
     margin-left: 120px;
-    max-width: 520px;
+    max-width: 540px;
+}
+.feature-description{
+    margin-bottom: 20px;
 }
 
+/* features you will enjoy */
+.fywe{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 140px;
+}
+#fywe-section-title{
+    border-left: 8px solid #FF900E;
+    padding-left: 15px;
+}
+
+.fywe-card{
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.fywe-card h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+.architect > img{
+    width: 100%;
+    /* filter: grayscale(100%); */
+}
+
+.architect button{
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#ten{
+    font-size: 4rem;
+    font-weight: 700;
+}
+#nine{
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+/* some fact styles */
+.fact-description{
+    max-width: 540px;
+}
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-items: center;
+    margin: 20px;
+}
+.fact{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
 /** Responsive media query */
+/* Small device */
 @media screen and (max-width: 576px){
-    .navbar, .nav-links{
+    .navbar, 
+    .nav-links, 
+    .teams{
         flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .team-features{
+        margin: 40px;
+    }
+
+    .fact-container{
+        grid-template-columns: 1fr;
+    }
+    .fywe{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .architect button{
+        margin-left: 0px;
+    }
+}
+
+
+/* Medium device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .teams{
+        flex-direction: column;
+    }
+    .team-features{
+        margin: 40px auto;
+    }
+    .fact-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fywe{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .architect button{
+        margin-left: 0px;
     }
 }
